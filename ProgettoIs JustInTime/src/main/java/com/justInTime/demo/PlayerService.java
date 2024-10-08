@@ -28,7 +28,7 @@ public class PlayerService {
         return playerRepository.findAll();
     }
 
-    // Aggiorna il punteggio massimo di un giocatore
+   /*  // Aggiorna il punteggio massimo di un giocatore
     public Player updatePlayerScore(Long id, int newScore) {
         Player player = getPlayer(id);
         if (player != null) {
@@ -36,7 +36,7 @@ public class PlayerService {
             playerRepository.save(player);
         }
         return player;
-    }
+    } */
 
     // Elimina un giocatore
     public void deletePlayer(Long id) {
