@@ -1,5 +1,5 @@
-package com.justInTime.demo;
 
+package com.justInTime.demo;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -49,4 +49,3 @@ public class Player {
             this.maxScore++;  // Aumenta il numero di partite vinte
         }
     }
-}
