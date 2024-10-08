@@ -13,7 +13,7 @@ public class Player {
     private Long id;
 
     private String name;  // Nome del giocatore
-    private int maxScore;  // Punteggio massimo ottenuto in una singola partita
+    private int maxScore;  // Punteggio ottenuto dal numero di partite vinte
 
     // Costruttore
     public Player() {
@@ -45,9 +45,8 @@ public class Player {
         return maxScore;
     }
 
-    public void setMaxScore(int score) {
-        if (score > this.maxScore) {
-            this.maxScore = score;  // Salva solo se è superiore
+    public void IncreaseMaxScore() {
+            this.maxScore++;  // Aumenta il numero di partite vinte
         }
     }
 }
