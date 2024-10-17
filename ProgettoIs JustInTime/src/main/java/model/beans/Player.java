@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.sql.Date;
+
 
 @Entity
 public class Player {
@@ -16,12 +18,13 @@ public class Player {
     private String name;  // Nome del giocatore
     private int maxScore;  // Punteggio ottenuto dal numero di partite vinte
     private  String cognome;
+    private Date birthdate;
     private Long telefono;
     private String email;
     private String password;
     private String username;
     private String tipo;
-    private String genere;
+    private String nazione;
     private int posizione;
 
     // Costruttore
@@ -33,7 +36,7 @@ public class Player {
         this.maxScore = maxScore;
     }
 
-    public Player(String name, int maxScore, String cognome, String genere, Long telefono, String email, String username, String password, String tipo) {
+    public Player(String name, int maxScore, String cognome, Date birthdate, String nazione, Long telefono, String email, String username, String password, String tipo) {
         this.name = name;
         this.maxScore = maxScore;
         this.telefono=telefono;
@@ -43,7 +46,8 @@ public class Player {
         this.username = username;
         this.password = password;
         this.tipo = tipo;
-        this.genere=genere;
+        this.nazione=nazione;
+        this.birthdate=birthdate;
     }
 
     // Getter e Setter
@@ -53,6 +57,14 @@ public class Player {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Date getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
     }
 
     public String getName() {
@@ -121,12 +133,12 @@ public class Player {
         this.tipo = tipo;
     }
 
-    public String getGenere() {
-        return genere;
+    public String getNazione() {
+        return nazione;
     }
 
-    public void setGenere(String genere) {
-        this.genere = genere;
+    public void setNazione(String nazione) {
+        this.nazione = nazione;
     }
 
     public int getPosizione() {
